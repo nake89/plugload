@@ -10,3 +10,4 @@ var Plugin1 = /** @class */ (function () {
     return Plugin1;
 }());
 exports.default = Plugin1;
+//# sourceMappingURL=plugin1.js.map
