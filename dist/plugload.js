@@ -55,11 +55,12 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.PluginLoader = void 0;
+exports.PlugLoad = void 0;
 var cosmiconfig_1 = require("cosmiconfig");
-var PluginLoader = /** @class */ (function () {
-    function PluginLoader(nameOfConfigOrArray) {
+var PlugLoad = /** @class */ (function () {
+    function PlugLoad(nameOfConfigOrArray, path) {
         this.loadedPlugins = [];
+        this.path = path !== null && path !== void 0 ? path : "plugins";
         if (Array.isArray(nameOfConfigOrArray)) {
             this.config = { plugins: nameOfConfigOrArray };
         }
@@ -72,12 +73,13 @@ var PluginLoader = /** @class */ (function () {
             this.config = result.config;
         }
     }
-    PluginLoader.prototype.getPlugins = function () {
+    PlugLoad.prototype.getPlugins = function () {
         return __awaiter(this, void 0, void 0, function () {
-            var _i, _a, plugin, importedPlugin;
+            var path, _i, _a, plugin, importedPlugin;
             return __generator(this, function (_b) {
                 switch (_b.label) {
                     case 0:
+                        path = this.path;
                         if (this.config === null)
                             throw new Error("no config");
                         _i = 0, _a = this.config.plugins;
@@ -85,7 +87,7 @@ var PluginLoader = /** @class */ (function () {
                     case 1:
                         if (!(_i < _a.length)) return [3 /*break*/, 4];
                         plugin = _a[_i];
-                        return [4 /*yield*/, Promise.resolve().then(function () { return __importStar(require("./plugins/" + plugin + ".js")); })];
+                        return [4 /*yield*/, Promise.resolve().then(function () { return __importStar(require("./" + path + "/" + plugin + ".js")); })];
                     case 2:
                         importedPlugin = _b.sent();
                         this.loadedPlugins.push(importedPlugin.default);
@@ -98,7 +100,7 @@ var PluginLoader = /** @class */ (function () {
             });
         });
     };
-    return PluginLoader;
+    return PlugLoad;
 }());
-exports.PluginLoader = PluginLoader;
-//# sourceMappingURL=pluginloader.js.map
+exports.PlugLoad = PlugLoad;
+//# sourceMappingURL=plugload.js.map

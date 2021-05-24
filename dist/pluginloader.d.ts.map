@@ -1,1 +1,0 @@
-{"version":3,"file":"pluginloader.d.ts","sourceRoot":"","sources":["../pluginloader.ts"],"names":[],"mappings":"AAEA,UAAU,kBAAkB;IAC1B,OAAO,EAAE,MAAM,EAAE,CAAC;CACnB;AAED,qBAAa,YAAY;IACvB,aAAa,QAAe;IAC5B,MAAM,EAAE,kBAAkB,GAAG,IAAI,CAAC;gBACtB,mBAAmB,EAAE,MAAM,EAAE,GAAG,MAAM;IAY5C,UAAU;CAOjB"}

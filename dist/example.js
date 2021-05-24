@@ -36,33 +36,31 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-var pluginloader_1 = require("./pluginloader");
-function init() {
-    return __awaiter(this, void 0, void 0, function () {
-        var provider, _i, _a, plugin, initPlugin, castPlugin, castPlugin;
-        return __generator(this, function (_b) {
-            switch (_b.label) {
-                case 0:
-                    provider = new pluginloader_1.PluginLoader("pluginloader");
-                    return [4 /*yield*/, provider.getPlugins()];
-                case 1:
-                    _b.sent();
-                    for (_i = 0, _a = provider.loadedPlugins; _i < _a.length; _i++) {
-                        plugin = _a[_i];
-                        initPlugin = new plugin();
-                        if (initPlugin.pluginName == "EmailPlugin") {
-                            castPlugin = initPlugin;
-                            castPlugin.sendEmail("person@example.com", "Title of message", "Hello Mr. How are you this fine evening?");
-                        }
-                        if (initPlugin.pluginName == "MeaniePlugin") {
-                            castPlugin = initPlugin;
-                            castPlugin.hurlInsults();
-                        }
+var plugload_1 = require("./plugload");
+;
+(function () { return __awaiter(void 0, void 0, void 0, function () {
+    var provider, _i, _a, plugin, initPlugin, castPlugin, castPlugin;
+    return __generator(this, function (_b) {
+        switch (_b.label) {
+            case 0:
+                provider = new plugload_1.PlugLoad("pluginloader", "plugins");
+                return [4 /*yield*/, provider.getPlugins()];
+            case 1:
+                _b.sent();
+                for (_i = 0, _a = provider.loadedPlugins; _i < _a.length; _i++) {
+                    plugin = _a[_i];
+                    initPlugin = new plugin();
+                    if (initPlugin.pluginName == "EmailPlugin") {
+                        castPlugin = initPlugin;
+                        castPlugin.sendEmail("person@example.com", "Title of message", "Hello Mr. How are you this fine evening?");
                     }
-                    return [2 /*return*/];
-            }
-        });
+                    if (initPlugin.pluginName == "MeaniePlugin") {
+                        castPlugin = initPlugin;
+                        castPlugin.hurlInsults();
+                    }
+                }
+                return [2 /*return*/];
+        }
     });
-}
-init();
+}); })();
 //# sourceMappingURL=example.js.map

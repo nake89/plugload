@@ -1,10 +1,11 @@
 {
-  "name": "pluginloader",
-  "version": "1.0.0",
-  "description": "",
+  "name": "plugload",
+  "version": "1.0.1",
+  "description": "A simple plugin loader module to add extensibility to your software.",
   "main": "./dist/pluginloader.js",
-  "types": "./dist/index.d.ts",
+  "types": "./dist/pluginloader.d.ts",
   "scripts": {
+    "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -14,6 +15,7 @@
     "cosmiconfig": "^7.0.0"
   },
   "devDependencies": {
-    "@types/node": "^15.6.0"
+    "@types/node": "^15.6.0",
+    "typescript": "^4.2.4"
   }
 }
