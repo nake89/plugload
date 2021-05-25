@@ -46,9 +46,9 @@ Example of usage:
 
 ```typescript
 ;(async () => {
-	// Your config file must be called .pluginloaderrc.yaml
+	// Your config file must be called .plugloadrc.yaml
 	// or other cosmiconfig compatible file name and type: https://github.com/davidtheclark/cosmiconfig
-	const provider = new PlugLoad("pluginloader", "plugins")
+	const provider = new PlugLoad("plugload", "plugins")
 	await provider.getPlugins()
 	for (let plugin of provider.loadedPlugins) {
 		const initPlugin = new plugin()
