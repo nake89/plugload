@@ -1,9 +1,9 @@
 {
   "name": "plugload",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A simple plugin loader module to add extensibility to your software.",
-  "main": "./dist/pluginloader.js",
-  "types": "./dist/pluginloader.d.ts",
+  "main": "./dist/plugload.js",
+  "types": "./dist/plugload.d.ts",
   "scripts": {
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
