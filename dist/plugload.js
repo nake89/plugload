@@ -87,7 +87,7 @@ var PlugLoad = /** @class */ (function () {
                     case 1:
                         if (!(_i < _a.length)) return [3 /*break*/, 4];
                         plugin = _a[_i];
-                        return [4 /*yield*/, Promise.resolve().then(function () { return __importStar(require("./" + path + "/" + plugin + ".js")); })];
+                        return [4 /*yield*/, Promise.resolve().then(function () { return __importStar(require(path + "/" + plugin + ".js")); })];
                     case 2:
                         importedPlugin = _b.sent();
                         this.loadedPlugins.push(importedPlugin.default);

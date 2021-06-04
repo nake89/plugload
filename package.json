@@ -1,6 +1,6 @@
 {
   "name": "plugload",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A simple plugin loader module to add extensibility to your software.",
   "main": "./dist/plugload.js",
   "types": "./dist/plugload.d.ts",
