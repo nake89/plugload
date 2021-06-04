@@ -25,7 +25,7 @@ export class PlugLoad {
     const path = this.path
     if (this.config === null) throw new Error("no config")
     for (const plugin of this.config.plugins) {
-      const importedPlugin = await import("./" + path + "/" + plugin + ".js")
+      const importedPlugin = await import(path + "/" + plugin + ".js")
       this.loadedPlugins.push(importedPlugin.default)
     }
   }
